@@ -4,8 +4,12 @@
 @use "./base/variables";
 @use "./base/utils";
 @use "./base/globals";
-
 //blocks
+@use "./blocks/icon";
+@use "./blocks/logo";
+@use "./blocks/button";
+@use "./blocks/burger-button";
+@use "./blocks/header";
 // @import "./blocks/_button.scss";
 // @import "./blocks/_grid.scss";
 // @import "./blocks/_header.scss";

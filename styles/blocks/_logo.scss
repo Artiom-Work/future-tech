@@ -1,0 +1,7 @@
+@use "../healpers" as *;
+
+.logo {
+  max-width: fluid(179, 128);
+  &__image {
+  }
+}

@@ -1,29 +1,38 @@
+@use "../healpers" as *;
+
 .button {
-  // @include flex-center(true);
+  display: inline-flex;
+  justify-content: center;
+  padding: rem(18) rem(24);
+  font-size: rem(18);
+  color: var(--color-gray-60);
+  white-space: nowrap;
+  background-color: var(--color-dark);
+  border: var(--border);
+  border-radius: rem(12);
 
-  // height: var(--button-height);
-  // padding-inline: 35px;
-  // font-size: 20px;
-  // color: var(--color-light);
-  // background-color: var(--color-dark);
-  // border: var(--border);
-  // border-radius: var(--border-radius);
+  @include laptop-media {
+    padding: rem(18) rem(20);
+    font-size: rem(14);
+    border-radius: rem(8);
+  }
 
-  // @include hover {
-  //   background-color: var(--color-accent);
-  //   color: var(--color-dark);
-  // }
-  // &--transparent {
-  //   color: var(--color-dark);
-  //   background-color: transparent;
-  // }
-  // &--accent {
-  //   background-color: var(--color-accent);
-  //   color: var(--color-dark);
+  @include hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    background-color: var(--color-gray-10);
+  }
 
-  //   @include hover {
-  //     background-color: var(--color-dark);
-  //     color: var(--color-accent);
-  //   }
-  // }
+  &--accent {
+    font-weight: 500;
+    color: var(--color-dark);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    border-radius: rem(10);
+    padding: rem(14) rem(20);
+
+    @include laptop-media {
+      padding: rem(10) rem(14);
+    }
+  }
 }

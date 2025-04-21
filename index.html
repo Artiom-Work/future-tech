@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" type="image/svg+xml" sizes="16x16" href="/images/icons/favicon.svg">
-	<link rel="icon" type="image/svg+xml" sizes="32x32" href="/images/icons/favicon.svg">
-	<link rel="icon" type="image/svg+xml" sizes="48x48" href="/images/icons/favicon.svg">
-	<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
 	<!-- <meta name="description"
 		content="Add your page description ..."> -->
 	<title>Future Tech | Home</title>
@@ -16,11 +16,58 @@
 </head>
 
 <body>
+	<header class="header">
+		<div class="header__promo">
+			<div class="header__promo-inner container">
+				<a class="header__promo-link" href="!#">
+					<span class="icon icon--yellow-arrow">
+						Subscribe to&nbsp;our Newsletter For New &amp;&nbsp;latest Blogs and Resources
+					</span>
+				</a>
+			</div>
+		</div>
 
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias beatae sit aut ea aspernatur harum officiis,
-		excepturi magnam quasi cupiditate dicta expedita praesentium eveniet hic? Laudantium autem provident nulla
-		perspiciatis?</p>
+		<div class="header__body">
+			<div class="header__body-inner container">
+				<a class="header__logo logo" href="./index.html" aria-label="Home" title="Home">
+					<img class="logo__image" src="./images/logo.svg" width="179" height="50" alt="Future Tech's logotupe">
+				</a>
 
+				<div class="header__overlay">
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="header__menu-item">
+								<a class="header__menu-link is-active" href="#!">Home</a>
+							</li>
+
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="#!">News</a>
+							</li>
+
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="#!">Podcasts</a>
+							</li>
+
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="#!">Resources</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a class="header__contact-us-link button button--accent" href="#!">
+						Contact&nbsp;Us
+					</a>
+				</div>
+
+				<button class="header__burger-button burger-button visible-mobile" type="button" title="Open menu"
+					aria-label="Open menu">
+					<span class="burger-button__line"></span>
+					<span class="burger-button__line"></span>
+					<span class="burger-button__line"></span>
+				</button>
+			</div>
+		</div>
+	</header>
 
 	<script type="module" src="./js/main.js" defer></script>
 </body>

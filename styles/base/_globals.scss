@@ -9,18 +9,6 @@ body {
   background-color: var(--color-dark);
 }
 
-// a,
-// button,
-// input,
-// textarea,
-// svg * {
-//   transition-duration: var(--transition-duration);
-// }
-// a {
-//   text-decoration: none;
-//   color: inherit;
-// }
-
 //titles
 h1,
 .h1,
@@ -34,7 +22,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  color: var(-color-light);
+  color: var(--color-light);
 }
 h1,
 .h1,
@@ -105,4 +93,18 @@ a {
   outline: rem(2) dashed var(--color-white);
   outline-offset: rem(4);
   transition-duration: 0s !important;
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: "";
+    }
+  }
 }

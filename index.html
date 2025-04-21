@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header" data-js-header>
 		<div class="header__promo">
 			<div class="header__promo-inner container">
 				<a class="header__promo-link" href="!#">
@@ -33,7 +33,7 @@
 					<img class="logo__image" src="./images/logo.svg" width="179" height="50" alt="Future Tech's logotupe">
 				</a>
 
-				<div class="header__overlay">
+				<div class="header__overlay" data-js-header-overlay>
 					<nav class="header__menu">
 						<ul class="header__menu-list">
 							<li class="header__menu-item">
@@ -60,7 +60,7 @@
 				</div>
 
 				<button class="header__burger-button burger-button visible-mobile" type="button" title="Open menu"
-					aria-label="Open menu">
+					aria-label="Open menu" data-js-header-burger-button>
 					<span class="burger-button__line"></span>
 					<span class="burger-button__line"></span>
 					<span class="burger-button__line"></span>
@@ -68,6 +68,7 @@
 			</div>
 		</div>
 	</header>
+
 
 	<script type="module" src="./js/main.js" defer></script>
 </body>

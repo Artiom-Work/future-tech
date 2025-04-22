@@ -10,11 +10,11 @@
 @use "./blocks/button";
 @use "./blocks/burger-button";
 @use "./blocks/header";
-// @import "./blocks/_button.scss";
-// @import "./blocks/_grid.scss";
-// @import "./blocks/_header.scss";
-// @import "./blocks/_cross-button.scss";
-// @import "./blocks/_section.scss";
-// @import "./blocks/_soc1als.scss";
-// @import "./blocks/_footer.scss";
+@use "./blocks/soc1als";
+@use "./blocks/badge";
+@use "./blocks/footer";
 //==========
+
+.header {
+  display: none !important;
+}

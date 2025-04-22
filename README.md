@@ -27,7 +27,7 @@ $\color{limegreen}\text{Учебная работа}$
 
 Макет -> [**Figma**](https://www.figma.com/design/YzTDRV7OaSoeCUBNYaoCZV/FutureTech?node-id=18-214&p=f&t=2AawYnN0WjKELrVd-0)
 
-Вёрстка -> [**Git pages**](https://artiom-work.github.io/positivus/)
+Вёрстка -> [**Git pages**](https://artiom-work.github.io/future-tech/)
 
 <img src="./public/images/readme-preview-image.png" width="400" alt="Изображение макета страницы">
 

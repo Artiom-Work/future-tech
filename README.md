@@ -1,4 +1,4 @@
-# $\color{orange}\textsf{Future Tech | Home}$
+# $\color{orange}\textsf{Future Tech}$
 
 $\color{limegreen}\text{Учебная работа}$
 

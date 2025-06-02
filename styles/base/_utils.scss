@@ -28,3 +28,47 @@
 //   position: relative;
 //   z-index: -1;
 // }
+
+.full-vw-line {
+  // Добавляется к элементу с классов container , чтобы продлить border за его пределы
+  position: relative;
+  // Создание псевддоэлементов. Общие свойства для вычисления ширины , толщины линии и цвета
+  &::before,
+  &::after {
+    position: absolute;
+
+    width: calc((100vw - var(--container-width)) / 2);
+    height: rem(1);
+    background-color: var(
+      --color-dark-15
+    ); // цвет должен совпадать со значением цвета в переменной border
+  }
+  // Модефикаторы классов , для позиционирования псевдоэлементов
+  &--top {
+    &::before {
+      content: "";
+      bottom: 100%;
+    }
+  }
+
+  &--bottom {
+    &::after {
+      content: "";
+      top: 100%;
+    }
+  }
+
+  &--left {
+    &::before,
+    &::after {
+      right: 100%;
+    }
+  }
+
+  &--right {
+    &::before,
+    &::after {
+      left: 100%;
+    }
+  }
+}

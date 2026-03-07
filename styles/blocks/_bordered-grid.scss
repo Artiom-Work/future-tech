@@ -1,0 +1,55 @@
+@use "../healpers" as *;
+
+.bordered-grid {
+  --columns: 1;
+  --itemPaddingY: #{fluid(80, 40)};
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  &--2-cols {
+    --columns: 2;
+  }
+
+  &--3-cols {
+    --columns: 3;
+    --itemPaddingX: #{rem(50)};
+
+    @include laptop-media {
+      --itemPaddingX: #{rem(40)};
+    }
+
+    @include tablet-media-above {
+      .bordered-grid__item {
+        /* Only first and second grid elements  */
+        &:nth-child(3n - 2),
+        &:nth-child(3n - 1) {
+          padding-right: var(--itemPaddingX);
+          border-right: var(--border);
+        }
+        /* Only second grid elements  */
+        &:nth-child(3n - 1) {
+          @include full-vw-centered-line(bottom);
+        }
+
+        /* Only second and third grid elements  */
+        &:nth-child(3n - 1),
+        &:nth-child(3n) {
+          padding-left: var(--itemPaddingX);
+        }
+      }
+    }
+
+    @include tablet-media {
+      --columns: 1;
+
+      .bordered-grid__item:not(:last-child) {
+        border-bottom: var(--border);
+      }
+    }
+  }
+
+  &__item {
+    padding-block: var(--itemPaddingY);
+  }
+}

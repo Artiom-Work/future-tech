@@ -5,6 +5,7 @@
 @use "./base/utils";
 @use "./base/globals";
 //blocks
+@use "./blocks/expandable-content";
 @use "./blocks/icon";
 @use "./blocks/logo";
 @use "./blocks/button";
@@ -46,6 +47,9 @@
 
 @use "./blocks/video-player";
 @use "./blocks/video-card";
+
+@use "./blocks/table-of-contants";
+@use "./blocks/blog-details";
 //==========
 
 // .header,

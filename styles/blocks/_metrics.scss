@@ -1,9 +1,42 @@
 @use "../healpers" as *;
 
 .metrics {
+  --colums: 3;
+
+  &--4-cols {
+    --colums: 4;
+
+    text-align: center;
+
+    @include tablet-media-above {
+      .metrics__item:nth-child(4n) {
+        padding-right: 0;
+      }
+    }
+
+    @include tablet-media {
+      --colums: 2;
+
+      padding-inline: 0;
+
+      .metrics__item {
+        border-bottom: var(--border);
+
+        &:nth-child(odd) {
+          padding-left: var(--container-padding-x);
+        }
+
+        &:nth-child(even) {
+          padding-right: var(--container-padding-x);
+          border-right: 0;
+        }
+      }
+    }
+  }
+
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(var(--colums), 1fr);
   }
 
   &__item {

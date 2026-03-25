@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<title>Future Tech | Component select</title>
+
+	<link rel="stylesheet" href="./styles/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js" defer></script>
+	<script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+	<header class="header" data-js-header>
+		<div class="header__promo">
+			<div class="header__promo-inner container">
+				<a class="header__promo-link" href="#!">
+					<span class="icon icon--yellow-arrow">
+						Subscribe to&nbsp;our Newsletter For New &amp;&nbsp;latest Blogs and Resources
+					</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="header__body">
+			<div class="header__body-inner container">
+				<a class="header__logo logo" href="./index.html" aria-label="Home" title="Home">
+					<img class="logo__image" src="./images/logo.svg" width="179" height="50" alt="Future Tech's logotupe">
+				</a>
+
+				<div class="header__overlay" data-js-header-overlay>
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="./index.html">Home</a>
+							</li>
+
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="./news.html">News</a>
+							</li>
+
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="./podcasts.html">Podcasts</a>
+							</li>
+
+							<li class="header__menu-item">
+								<a class="header__menu-link" href="./resources.html">Resources</a>
+							</li>
+						</ul>
+					</nav>
+
+					<a class="header__contact-us-link button button--accent" href="./contacts.html">
+						Contact&nbsp;Us
+					</a>
+				</div>
+
+				<button class="header__burger-button burger-button visible-mobile" type="button" title="Open menu"
+					aria-label="Open menu" data-js-header-burger-button>
+					<span class="burger-button__line"></span>
+					<span class="burger-button__line"></span>
+					<span class="burger-button__line"></span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<div class="container" style="max-width: 400px; width: 100%;">
+		<div class="select field" data-js-select>
+			<label class="select__label" for="phoneNumberPrefix" id="phone-number-prefix-select-label">Phone number
+				prefix</label>
+
+			<select class="select__original-control field__control" id="phoneNumberPrefix" tabindex="0"
+				data-js-select-original-control>
+				<option value="+7" selected>+7</option>
+				<option value="+1">+1</option>
+				<option value="+2">+2</option>
+				<option value="+3">+3</option>
+			</select>
+
+			<div class="select__body">
+				<div class="select__button field__control" tabindex="0" role="combobox" aria-expanded="false"
+					aria-haspopup="listbox" aria-controls="phone-number-prefix-select-dropdown"
+					aria-labelledby="phone-number-prefix-select-label" data-js-select-button>
+					+7</div>
+				<div class="select__dropdown" id="phone-number-prefix-select-dropdown" role="listbox"
+					aria-labelledby="phone-number-prefix-select-label" data-js-select-dropdown>
+					<div class="select__option is-selected is-current" id="phone-number-prefix-select-option-1" role="option"
+						aria-selected="true" data-js-select-option>+7
+					</div>
+					<div class="select__option" id="phone-number-prefix-select-option-2" role="option" aria-selected="false"
+						data-js-select-option>+1
+					</div>
+					<div class="select__option" id="phone-number-prefix-select-option-3" role="option" aria-selected="false"
+						data-js-select-option>+2
+					</div>
+					<div class="select__option" id="phone-number-prefix-select-option-4" role="option" aria-selected="false"
+						data-js-select-option>+3
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

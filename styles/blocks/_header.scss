@@ -25,9 +25,20 @@
     @include mobile-media {
       padding-block: rem(14);
     }
+
+    @include mobile-s-media {
+      font-size: rem(12);
+    }
+
     &-inner {
     }
+
     &-link {
+      .icon {
+        @include mobile-s-media {
+          column-gap: rem(5);
+        }
+      }
     }
   }
 

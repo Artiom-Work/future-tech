@@ -1,6 +1,41 @@
 @use "../healpers" as *;
 
 .soc1als {
+  &--3-cols {
+    max-width: rem(308);
+    width: 100%;
+
+    .soc1als {
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: rem(10);
+
+        @include laptop-media {
+          column-gap: rem(10);
+        }
+      }
+
+      &__link {
+        @include flex-center;
+
+        width: 100%;
+        height: rem(60);
+        background-color: var(--color-dark-10);
+        border: var(--border);
+        border-radius: rem(6);
+
+        @include laptop-media {
+          height: rem(48);
+        }
+
+        @include hover {
+          border-color: var(--color-accent);
+        }
+      }
+    }
+  }
+
   &__list {
     display: flex;
     column-gap: rem(20);
@@ -9,9 +44,11 @@
       column-gap: rem(14);
     }
   }
+
   &__item {
     display: flex;
   }
+
   &__link {
     --size: #{rem(24)};
 

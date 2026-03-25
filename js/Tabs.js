@@ -1,6 +1,10 @@
+import BaseComponent from "./BaseComponent.js"
+/* Импорт абстрактного класса */
 const rootSelector = '[data-js-tabs]'
 
-class Tabs {
+/* Для расширения класса используется extends Tabs - класс ребёнок BaseCompnent - основной класс */
+
+class Tabs extends BaseComponent {
 	selectors = {
 		root: rootSelector,
 		button: '[data-js-tabs-button]',
@@ -10,12 +14,15 @@ class Tabs {
 	stateClasses = {
 		isActive: 'is-active',
 	}
+
 	stateAttributes = {
 		ariaSelected: 'aria-selected',
 		tabIndex: 'tabindex',
 	}
 
 	constructor(rootElement) {
+		super()
+		/* super() ключевое слово для расширения класса от класса родителя(синтаксическая особенность) */
 		this.rootElement = rootElement
 		this.buttonElements = this.rootElement.querySelectorAll(this.selectors.button)
 		this.contentElements = this.rootElement.querySelectorAll(this.selectors.content)
@@ -25,21 +32,6 @@ class Tabs {
 		})
 		this.limitTabsIndex = this.buttonElements.length - 1
 		this.bindEvents()
-	}
-
-	getProxyState(initialState) {
-		return new Proxy(initialState, {
-			get: (target, prop) => {
-				return target[prop]
-			},
-			set: (target, prop, value) => {
-				target[prop] = value
-
-				this.updateUI();
-
-				return true
-			}
-		})
 	}
 
 	updateUI() {

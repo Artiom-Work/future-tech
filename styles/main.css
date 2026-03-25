@@ -340,7 +340,7 @@ svg * {
   translate: 0 -50%;
   content: "";
   right: 0;
-  background: url("../../images/icons/arrow-top-right_black.svg") no-repeat center var(--color-accent);
+  background: url("../images/icons/arrow-top-right_black.svg") no-repeat center var(--color-accent);
   border-radius: 50%;
 }
 
@@ -1135,7 +1135,7 @@ button[aria-label]::before {
   grid-area: resources-preview;
   padding-left: 5rem;
   padding-bottom: 5rem;
-  background: url("../../images/resourrces-preview/bg.webp") no-repeat 0 0/cover;
+  background: url("../images/resourrces-preview/bg.webp") no-repeat 0 0/cover;
 }
 @media (width <= 90.06125rem) {
   .hero__resources-preview {
@@ -1153,7 +1153,7 @@ button[aria-label]::before {
     width: 100vw;
     margin-left: calc(var(--container-padding-x) * -1);
     padding: 6.25rem 2.5rem 2.5rem;
-    background-image: url("../../images/resourrces-preview/bg_tablet.webp");
+    background-image: url("../images/resourrces-preview/bg_tablet.webp");
     background-size: contain;
   }
 }

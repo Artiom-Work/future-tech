@@ -21,13 +21,6 @@
     display: none !important;
   }
 }
-// .lock-body {
-//   overflow: hidden;
-// }
-// .hide-layer {
-//   position: relative;
-//   z-index: -1;
-// }
 
 .full-vw-line {
   // Добавляется к элементу с классов container , чтобы продлить border за его пределы
@@ -94,7 +87,7 @@
 
     content: "";
     right: 0;
-    background: url("../../images/icons/arrow-top-right_black.svg") no-repeat
+    background: url("../images/icons/arrow-top-right_black.svg") no-repeat
       center var(--color-accent);
     border-radius: 50%;
   }
